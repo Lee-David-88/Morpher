@@ -1,0 +1,33 @@
+﻿<Window x:Class="COMP_4995_A1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:COMP_4995_A1"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="1111" Height="711">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="775"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Add_Left" Content="Add Left Image" Margin="256,676,0,0" Click="Button_Click" Width="Auto" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <Button x:Name="Add_Right" Content="Add Right Image" Margin="0,0,-76,15" Click="Button_Click_1" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <Button x:Name="DrawMode" Content="Draw Mode" Margin="15,41,682,606" Click="DrawMode_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="EditMode" Content="Edit Mode" Margin="124,41,573,606" Click="EditMode_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="Warp" Content="Warp" Margin="259,63,0,0" Click="Warp_Click" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.054,0.616"/>
+        <Button x:Name="Morph" Content="Morph" Margin="0,63,0,0" Click="Morph_Click" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0.054,0.616"/>
+        <Grid  Margin="71,146,219,62" Background="#FFCBC4C4">
+            <Image x:Name="LeftImage" Stretch="None" MouseLeftButtonDown="LeftImage_MouseLeftButtonDown" MouseMove="LeftImage_MoveMouse" />
+            <Canvas x:Name="LeftDrawable"/>
+        </Grid>
+        <Grid Margin="566,146,-267,62" Background="#FFCBC4C4">
+            <Image x:Name="RightImage" Stretch="None" MouseLeftButtonDown="RightImage_MouseLeftButtonDown" MouseMove="RightImage_MoveMouse"/>
+            <Canvas x:Name="RightDrawable"/>
+        </Grid>
+
+    </Grid>
+</Window>
